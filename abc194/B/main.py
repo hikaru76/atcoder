@@ -15,15 +15,10 @@ def main():
 		a.append(c)
 		b.append(d)
 	i = a.index(min(a))
-	j = b.index(min(b))
-
-	if i == j:
-		c, d = a[i], b[i]
-		del a[i]
-		del b[i]
-		ans = min(c + d, max(min(a), d), max(c, min(b)))
-	else:
-		ans = max(a[i], b[i])
+	ans = 1000000000
+	for i in range(n):
+		for j in range(n):
+			ans = min(ans, a[i]+b[j] if i == j else max(a[i], b[j]))
 	print(ans)
 
 if __name__ == "__main__":
