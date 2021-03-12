@@ -1,5 +1,7 @@
 import sys
 import os
+import subprocess
+import shutil
 
 directoryname = sys.argv[1]
 problemname = '@'
@@ -18,6 +20,8 @@ def LS(): return list(sys.stdin.readline().rstrip().split())\n\
 \n\
 def main():\n\
 	\n\n\
-if __name__ == "__main__"\n\
+if __name__ == "__main__":\n\
 	main()')
 	f.close
+	subprocess.run(['oj', 'd', 'https://atcoder.jp/contests/' + str.lower(directoryname[:3]) + directoryname[3:] + '/tasks/' + str.lower(directoryname[:3]) + directoryname[3:] + '_' + str.lower(problemname)])
+	shutil.move('test', directoryname + '/' + problemname + '/')
