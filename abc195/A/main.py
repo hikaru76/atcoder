@@ -5,17 +5,14 @@ def LI(): return list(map(int,sys.stdin.readline().rstrip().split()))
 def S(): return sys.stdin.readline().rstrip()
 def LS(): return list(sys.stdin.readline().rstrip().split())
 
-def base10int(value, base):
-    if (int(value / base)):
-        return base10int(int(value / base), base) + str(value % base)
-    return str(value % base)
+
 
 def main():
-	x = S()
-	m = S()
-	for i in range(1, 10):
-		print(base10int(int(x), i))
+	m, h = LI()
+	if (h % m == 0):
+		print("Yes")
+	else:
+		print("No")
 
-sys.setrecursionlimit(10000)
 if __name__ == "__main__":
 	main()
