@@ -13,7 +13,7 @@ def base10int(value, base):
 def main():
 	x = S()
 	m = S()
-	for i in range(1, 10):
+	for i in range(2, 10):
 		print(base10int(int(x), i))
 
 sys.setrecursionlimit(10000)
