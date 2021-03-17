@@ -8,7 +8,17 @@ def LS(): return list(sys.stdin.readline().rstrip().split())
 
 
 def main():
-	
+	n, s, d = LI()
+	dmg = 0
+	for _ in range(n):
+		x, y = LI()
+		if not (x >= s or y <= d):
+			dmg = 1
+	if dmg:
+		print("Yes")
+	else:
+		print("No")
+
 
 if __name__ == "__main__":
 	main()
