@@ -8,6 +8,8 @@ def LS(): return list(sys.stdin.readline().rstrip().split())
 
 
 def main():
+	n = I()
+	a = LI()
 	
 
 if __name__ == "__main__":
