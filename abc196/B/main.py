@@ -8,13 +8,11 @@ def LS(): return list(sys.stdin.readline().rstrip().split())
 
 
 def main():
-	h,w,a,b = LI()
-	pattern = 0
-	if h == 1 or w == 1:
-		pattern = h*w-1
+	x = S()
+	if '.' in x:
+		print(x[:x.index('.')])
 	else:
-		pattern = (h-1) * w + (w-1) * h
-	
+		print(x)
 
 if __name__ == "__main__":
 	main()
